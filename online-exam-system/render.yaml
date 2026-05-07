@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: online-exam-system
+    env: node
+    buildCommand: npm install
+    startCommand: node backend/server.js
+    # The directory where Render will look for the start command
+    # Since server.js resides in backend/, we set the working directory accordingly
+    # Render automatically serves the static frontend via Express
+    envVars:
+      - key: NODE_VERSION
+        value: 20

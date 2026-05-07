@@ -1,0 +1,135 @@
+/* style.css – clean, responsive card layout */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --primary-bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --danger-color: #e74c3c;
+  --success-color: #27ae60;
+  --border-radius: 8px;
+  --max-width: 800px;
+  --spacing: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--primary-bg);
+  color: var(--primary-color);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing) * 2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  margin-bottom: var(--spacing);
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: var(--spacing) 0.5rem;
+  background: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="password"], select {
+  padding: 0.75rem;
+  margin-bottom: var(--spacing);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+input[type="submit"], button {
+  padding: 0.75rem 1rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+input[type="submit"]:hover, button:hover {
+  background: #2980b9;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+.question {
+  margin-bottom: var(--spacing);
+}
+
+.options label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.timer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--danger-color);
+  margin-bottom: var(--spacing);
+  text-align: right;
+}
+
+.result {
+  font-size: 1.2rem;
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+}
+
+.result.pass {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.result.fail {
+  background: var(--danger-color);
+  color: #fff;
+}
