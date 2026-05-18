@@ -9,7 +9,32 @@
 <body>
   <div class="container">
     <h1>Admin Login</h1>
-    <p>This is a placeholder admin login page.</p>
+    <form id="admin-login-form" class="card">
+      <label for="admin-username">Username</label>
+      <input type="text" id="admin-username" required />
+      <label for="admin-password">Password</label>
+      <input type="password" id="admin-password" required />
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <div id="admin-dashboard" class="hidden card">
+      <h2>Question Management</h2>
+      <table id="questions-table" class="responsive-table">
+        <thead>
+          <tr><th>ID</th><th>Question</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <h3>Add New Question</h3>
+      <form id="add-question-form" class="card">
+        <input type="text" id="new-question" placeholder="Question" required />
+        <input type="text" id="option-a" placeholder="Option A" required />
+        <input type="text" id="option-b" placeholder="Option B" required />
+        <input type="text" id="option-c" placeholder="Option C" required />
+        <input type="text" id="option-d" placeholder="Option D" required />
+        <input type="text" id="correct-option" placeholder="Correct (a/b/c/d)" required />
+        <button type="submit" class="btn">Add Question</button>
+      </form>
+    </div>
     <a href="index.html" class="btn">Back to Home</a>
   </div>
   <script src="js/app.js"></script>
