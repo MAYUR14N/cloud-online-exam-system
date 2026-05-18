@@ -5,7 +5,7 @@
     "role": "admin"
   },
   {
-    "username": "student1",
+    "username": "student",
     "password": "student123",
     "role": "student"
   }
